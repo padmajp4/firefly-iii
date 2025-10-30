@@ -1,12 +1,13 @@
 {
-    "scripts": {
-        "postinstall": "patch-package --error-on-fail"
-    },
-    "workspaces": [
-        "resources/assets/v1",
-        "resources/assets/v2"
-    ],
-    "devDependencies": {
-        "postcss": "^8.4.47"
-    }
+  "scripts": {
+    "postinstall": "patch-package --error-on-fail",
+    "build": "npm run build -w resources/assets/v1 && npm run build -w resources/assets/v2"
+  },
+  "workspaces": [
+    "resources/assets/v1",
+    "resources/assets/v2"
+  ],
+  "devDependencies": {
+    "postcss": "^8.4.47"
+  }
 }
